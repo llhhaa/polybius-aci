@@ -1,6 +1,7 @@
 import { config } from 'dotenv';
 import { defineConfig } from 'drizzle-kit';
 
+// If NOT in vercel, fall back to .env.local
 if (!process.env.VERCEL) {
   config({ path: '.env.local' });
 }
